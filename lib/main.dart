@@ -7,18 +7,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.white,
+        tabBarTheme: const TabBarTheme(
+          labelColor: Colors.black,
+          labelStyle: TextStyle(color: Colors.black),
+        ),
+      ),
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: const Color(0xffffffff),
             title: const Text('Plushable Plushies'),
+            titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),
             centerTitle: true,
             bottom: const TabBar(
               tabs: [
                 //https://api.flutter.dev/flutter/material/TabBar-class.html
-                Tab(text: 'Noah\'s Ark'),
+                Tab(
+                  text: 'Noah\'s Ark',
+                ),
                 Tab(
                     text: 'Old'
                         '\nMcDonald'),
