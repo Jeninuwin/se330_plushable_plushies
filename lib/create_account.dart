@@ -1,35 +1,19 @@
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:se330_plushable_plushies/create_account.dart';
-import 'package:se330_plushable_plushies/main.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:se330_plushable_plushies/login.dart';
 
 
+class CreateAccount extends StatefulWidget {
+  const CreateAccount({ Key? key }) : super(key: key);
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginDemo(),
-    );
-  }
+  State<CreateAccount> createState() => _CreateAccountState();
 }
 
-class LoginDemo extends StatefulWidget {
-  @override
-  _LoginDemoState createState() => _LoginDemoState();
-}
-
-
-
-class _LoginDemoState extends State<LoginDemo> {
-  GlobalKey<FormState> formkey = GlobalKey<FormState>();
+class _CreateAccountState extends State<CreateAccount> {
+    GlobalKey<FormState> formkey = GlobalKey<FormState>();
 
   String validatePassword(String value) {
     if (value.isEmpty) {
@@ -46,15 +30,13 @@ class _LoginDemoState extends State<LoginDemo> {
     }
     
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color(0xffffffff),
-        title: Text("Login Page"),        
+        title: const Text("Create Account"),        
         titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
 
       ),
@@ -65,11 +47,11 @@ class _LoginDemoState extends State<LoginDemo> {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 60.0),
+              padding: const EdgeInsets.only(top: 40.0),
               child: Center(
                 child: Container(
-                    width: 200,
-                    height: 150,
+                    width: 150,
+                    height: 100,
                     /*decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
@@ -79,6 +61,20 @@ class _LoginDemoState extends State<LoginDemo> {
             Padding(
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Full Name',
+                  ),
+                validator: MultiValidator([
+                  RequiredValidator(errorText: "* Required"),
+                ]),
+              ),
+            ),
+
+            Padding(
+              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+              padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextFormField(
                 decoration: const InputDecoration(
                     border: OutlineInputBorder(),
@@ -116,38 +112,23 @@ class _LoginDemoState extends State<LoginDemo> {
                 onPressed: () {
                   if(formkey.currentState!.validate()) {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                      context, MaterialPageRoute(builder: (_) => LoginDemo()));
                   }
-
                 },
                 child:  const Text(
-                  'Login',
+                  'Create Account',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
             ),
             const SizedBox(
               height: 110,
-            ),
-            const Text('New User?'),
-            
-            TextButton(
-              onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (_) => CreateAccount() ));
-              },
-              child: const Text(
-                'Create Account',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
-              ),
-            ),
+            ),            
           ],
         ),
         ),
       )
+      
     );
   }
 }
-
-
-
-
