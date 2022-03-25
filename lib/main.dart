@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import './HomePage.dart' as first;
-import './login.dart' as second;
+import './productpageArk.dart' as second;
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
 //if you are adding more tabs make sure to increase the length on line 24 and add the tab name
-void main() => runApp(const MyApp());
+void main() => runApp(const HomePage());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           body: const TabBarView(
-            children: <Widget>[first.HomePage(), second.LoginDemo()],
+            children: <Widget>[first.HomePage(), second.ArkCategoriesScreen()],
             // child: Column(
             //   children: <Widget>[
             //     Row(

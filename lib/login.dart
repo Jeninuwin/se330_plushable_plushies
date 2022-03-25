@@ -1,23 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:se330_plushable_plushies/main.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
-import 'HomePage.dart';
+
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginDemo(),
+    );
+  }
+}
 
 class LoginDemo extends StatefulWidget {
-  const LoginDemo({Key? key}) : super(key: key);
-
   @override
   _LoginDemoState createState() => _LoginDemoState();
 }
 
+
+
 class _LoginDemoState extends State<LoginDemo> {
+  GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+  String validatePassword(String value) {
+    if (value.isEmpty) {
+      return "* Required";
+    }
+
+    else if (value.length < 6) {
+      return "Password should be atleast 6 characters";
+    } else if (value.length > 15) {
+      return "Password should not be greater than 15 characters";
+    }
+    else {
+      return null.toString();
+    }
+    
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("Login Page"),
+        backgroundColor: const Color(0xffffffff),
+        title: Text("Login Page"),        
+        titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
+
       ),
       body: SingleChildScrollView(
+        child: Form(
+          autovalidateMode: AutovalidateMode.always,
+          key: formkey,
         child: Column(
           children: <Widget>[
             Padding(
@@ -32,30 +73,39 @@ class _LoginDemoState extends State<LoginDemo> {
                     child: Image.asset('assets/images/plushable_plushie.png')),
               ),
             ),
-            const Padding(
+            Padding(
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                decoration: InputDecoration(
+              child: TextFormField(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Email',
                     hintText: 'Enter valid email id as abc@gmail.com'),
+                validator: MultiValidator([
+                  RequiredValidator(errorText: "* Required"),
+                  EmailValidator(errorText: "Enter valid email id"),
+                ]),
               ),
             ),
-            const Padding(
-              padding:
-                  EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
               //padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
+              child: TextFormField(
+
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                     hintText: 'Enter secure password'),
+                validator: MultiValidator([
+                  RequiredValidator(errorText: "* Required"),
+                  MinLengthValidator(6, errorText: "Password should be at least 6 characters"),
+                ]),
               ),
             ),
             TextButton(
-              onPressed: () {
+              onPressed: (){
                 //TODO FORGOT PASSWORD SCREEN GOES HERE
               },
               child: const Text(
@@ -70,10 +120,13 @@ class _LoginDemoState extends State<LoginDemo> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
-                  Navigator.push(
+                  if(formkey.currentState!.validate()) {
+                    Navigator.push(
                       context, MaterialPageRoute(builder: (_) => HomePage()));
+                  }
+
                 },
-                child: const Text(
+                child:  const Text(
                   'Login',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
@@ -83,8 +136,9 @@ class _LoginDemoState extends State<LoginDemo> {
               height: 110,
             ),
             const Text('New User?'),
+            
             TextButton(
-              onPressed: () {
+              onPressed: (){
                 //TODO FORGOT PASSWORD SCREEN GOES HERE
               },
               child: const Text(
@@ -94,133 +148,12 @@ class _LoginDemoState extends State<LoginDemo> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-/*
-import 'package:flutter/material.dart';
- 
-void main() => runApp(const MyApp());
- 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
- 
-  static const String _title = '';
- 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData
-      (
-        primaryColor: Colors.white,
-        tabBarTheme: const TabBarTheme(
-          labelColor: Colors.black,
-          labelStyle: TextStyle(color: Colors.black),
         ),
-      ),
-      home: Scaffold(
-        appBar: AppBar(title: const Text(_title)),
-        body: const MyStatefulWidget(),
-      ),
+      )
     );
   }
 }
- 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
- 
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
- 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  TextEditingController nameController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
- 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(10),
-        child: ListView(
-          children: <Widget>[
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Plushable Plushies',
-                  style: TextStyle(
-                      color: Color.fromARGB(255, 226, 146, 173),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Log in',
-                  style: TextStyle(fontSize: 20),
-                )),
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: TextField(
-                controller: nameController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'User Name',
-                ),
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-              child: TextField(
-                obscureText: true,
-                controller: passwordController,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                ),
-              ),
-            ),
-
-            Container(
-                height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                child: ElevatedButton(
-                  child: const Text('Login'),
-                  onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
-                  },
-                )
-            ),
-            Row(
-              children: <Widget>[
-                const Text('Don\'t have an account?'),
-                TextButton(
-                  child: const Text(
-                    'Create Account',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  onPressed: () {
-                    //signup screen
-
-                  },
-                ),
-
-              ],
-              mainAxisAlignment: MainAxisAlignment.center,
-            ),
-            Center(
-                  child: Image.asset('assets/images/plushable_plushie.png')
-                ),
 
 
-          ],
-        ));
-        
-  }
-}
 
-*/
+
