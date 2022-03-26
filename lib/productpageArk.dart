@@ -10,7 +10,7 @@ class ArkCategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Del Meals'),
+        title: const Text('Noahs Ark'),
       ),
       body: GridView(
         children: TEMP_CATEGORIES

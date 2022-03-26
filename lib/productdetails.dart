@@ -1,6 +1,10 @@
+// ignore_for_file: unnecessary_const, deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatefulWidget {
+  const ProductDetailPage({Key? key}) : super(key: key);
+
   @override
   _ProductDetailPageState createState() => _ProductDetailPageState();
 }
@@ -13,7 +17,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.chevron_left,
             size: 40.0,
             color: Colors.black,
@@ -23,7 +27,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           },
         ),
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "PRODUCT DETAIL",
           style: TextStyle(
             color: Colors.black,
@@ -49,31 +53,31 @@ class _ProductDetailPageState extends State<ProductDetailPage>
               children: <Widget>[
                 _buildProductImagesWidgets(),
                 _buildProductTitleWidget(),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildPriceWidgets(),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildDivider(screenSize),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildFurtherInfoWidget(),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildDivider(screenSize),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildSizeChartWidgets(),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildDetailsAndMaterialWidgets(),
-                SizedBox(height: 12.0),
+                const SizedBox(height: 12.0),
                 _buildStyleNoteHeader(),
-                SizedBox(height: 6.0),
+                const SizedBox(height: 6.0),
                 _buildDivider(screenSize),
-                SizedBox(height: 4.0),
+                const SizedBox(height: 4.0),
                 _buildStyleNoteData(),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 _buildMoreInfoHeader(),
-                SizedBox(height: 6.0),
+                const SizedBox(height: 6.0),
                 _buildDivider(screenSize),
-                SizedBox(height: 4.0),
+                const SizedBox(height: 4.0),
                 _buildMoreInfoData(),
-                SizedBox(height: 24.0),
+                const SizedBox(height: 24.0),
               ],
             ),
           ),
@@ -99,7 +103,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
 
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Container(
+      child: SizedBox(
         height: 250.0,
         child: Center(
           child: DefaultTabController(
@@ -109,19 +113,19 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                 TabBarView(
                   controller: imagesController,
                   children: <Widget>[
-                    Image.network(
-                      "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1304671/2016/4/14/11460624898615-Hancock-Men-Shirts-8481460624898035-1_mini.jpg",
+                    Image.asset(
+                      'assets/images/test.png',
                     ),
-                    Image.network(
-                      "https://n1.sdlcdn.com/imgs/c/9/8/Lambency-Brown-Solid-Casual-Blazers-SDL781227769-1-1b660.jpg",
+                    Image.asset(
+                      'assets/images/test.png',
                     ),
-                    Image.network(
-                      "https://images-na.ssl-images-amazon.com/images/I/71O0zS0DT0L._UX342_.jpg",
+                    Image.asset(
+                      'assets/images/test.png',
                     ),
                   ],
                 ),
                 Container(
-                  alignment: FractionalOffset(0.5, 0.95),
+                  alignment: const FractionalOffset(0.5, 0.95),
                   child: TabPageSelector(
                     controller: imagesController,
                     selectedColor: Colors.grey,
@@ -137,13 +141,13 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   }
 
   _buildProductTitleWidget() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-      child: Center(
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 12.0),
+      child: const Center(
         child: Text(
           //name,
           "Nakkana",
-          style: TextStyle(fontSize: 16.0, color: Colors.black),
+          style: const TextStyle(fontSize: 16.0, color: Colors.black),
         ),
       ),
     );
@@ -156,14 +160,14 @@ class _ProductDetailPageState extends State<ProductDetailPage>
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
-          Text(
+          const Text(
             "\$899",
-            style: TextStyle(fontSize: 16.0, color: Colors.black),
+            style: const TextStyle(fontSize: 16.0, color: Colors.black),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8.0,
           ),
-          Text(
+          const Text(
             "\$1299",
             style: TextStyle(
               fontSize: 12.0,
@@ -171,7 +175,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
               decoration: TextDecoration.lineThrough,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8.0,
           ),
           Text(
@@ -195,7 +199,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             Icons.local_offer,
             color: Colors.grey[500],
           ),
-          SizedBox(
+          const SizedBox(
             width: 12.0,
           ),
           Text(
@@ -222,7 +226,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                 Icons.straighten,
                 color: Colors.grey[600],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 12.0,
               ),
               Text(
@@ -246,56 +250,54 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   }
 
   _buildDetailsAndMaterialWidgets() {
-    TabController tabController = new TabController(length: 2, vsync: this);
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          TabBar(
+    TabController tabController = TabController(length: 2, vsync: this);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        TabBar(
+          controller: tabController,
+          tabs: const <Widget>[
+            Tab(
+              child: Text(
+                "DETAILS",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            Tab(
+              child: Text(
+                "MATERIAL & CARE",
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+          ],
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+          height: 40.0,
+          child: TabBarView(
             controller: tabController,
-            tabs: <Widget>[
-              Tab(
-                child: Text(
-                  "DETAILS",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
+            children: const <Widget>[
+              Text(
+                "76% acrylic, 19% polyster, 5% metallic yarn Hand-wash cold",
+                style: TextStyle(
+                  color: Colors.black,
                 ),
               ),
-              Tab(
-                child: Text(
-                  "MATERIAL & CARE",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
+              Text(
+                "86% acrylic, 9% polyster, 1% metallic yarn Hand-wash cold",
+                style: TextStyle(
+                  color: Colors.black,
                 ),
-              ),
+              )
             ],
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
-            height: 40.0,
-            child: TabBarView(
-              controller: tabController,
-              children: <Widget>[
-                Text(
-                  "76% acrylic, 19% polyster, 5% metallic yarn Hand-wash cold",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-                Text(
-                  "86% acrylic, 9% polyster, 1% metallic yarn Hand-wash cold",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                )
-              ],
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
@@ -356,7 +358,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   }
 
   _buildBottomNavigationBar() {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 50.0,
       child: Row(
@@ -372,7 +374,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
+                  children: const <Widget>[
                     Icon(
                       Icons.list,
                       color: Colors.white,
@@ -397,7 +399,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
+                  children: const <Widget>[
                     Icon(
                       Icons.card_travel,
                       color: Colors.white,
