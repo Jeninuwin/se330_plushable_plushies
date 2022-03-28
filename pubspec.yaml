@@ -63,6 +63,23 @@ flutter:
     - assets/plushable_plushie.png
     - assets/logo_resized.png
     - assets/resizedaccount.png
+    - assets/BichonFrise.jpg
+    - assets/Fawn.jpg
+    - assets/Ferret.jpg
+    - assets/Giraffe.jpg
+    - assets/LionCub.jpg
+    - assets/OrangeTabbyCat.jpg
+    - assets/otter2.jpg
+    - assets/otter3.jpg
+    - assets/otter.jpg
+    - assets/Pomeranian.jpg
+    - assets/RedPanda.jpg
+    - assets/ShibaInu.jpg
+    - assets/SnowLeopard.jpg
+    - assets/SnowLeopard2.jpg
+    - assets/TexedoCat.jpg
+    - assets/wolf.jpg
+    - assets/Yorkie.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
