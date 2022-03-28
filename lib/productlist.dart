@@ -15,7 +15,7 @@ class ProductsListPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
         title: const Text(
-          "PRODUCT LIST",
+          "Noah's Ark",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -96,46 +96,46 @@ class ProductsListPage extends StatelessWidget {
   _dummyProductsList() {
     return [
       const ProductsListItem(
-        name: "Michael Kora",
+        name: "Bitchon Frise",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
-        image: "assets/images/test.png",
+        image: "assets/images/Bitchon Frise.jpg",
       ),
       const ProductsListItem(
-        name: "Michael Kora",
+        name: "Fawn",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
-        image: "assets/images/test.png",
+        image: "assets/images/Fawn.jpg",
       ),
       const ProductsListItem(
-        name: "David Klin",
+        name: "Giraffe",
         currentPrice: 249,
         originalPrice: 499,
         discount: 50,
-        image: "assets/images/test.png",
+        image: "assets/images/Giraffe.jpg",
       ),
       const ProductsListItem(
-        name: "Nakkana",
+        name: "Ferret",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
-        image: "assets/images/test.png",
+        image: "assets/images/Ferret.jpg",
       ),
       const ProductsListItem(
-        name: "David Klin",
+        name: "Lion Cub",
         currentPrice: 249,
         originalPrice: 499,
         discount: 20,
-        image: "assets/images/test.png",
+        image: "assets/images/Lion Cub.jpg",
       ),
       const ProductsListItem(
-        name: "Nakkana",
+        name: "Otter2",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
-        image: "assets/images/test.png",
+        image: "assets/images/otter 2.jpg",
       ),
     ];
   }
