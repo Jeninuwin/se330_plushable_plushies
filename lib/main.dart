@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                 Tab(
                     text: 'Old'
                         '\nMcDonald'),
-                Tab(text: 'Login'),
+                //Tab(text: 'Login'),
                 // Tab(text: 'Sale'),
                 // Tab(
                 //     text: 'Furry'
