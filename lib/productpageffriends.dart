@@ -1,9 +1,42 @@
+/*import 'package:flutter/material.dart';
+
+import './category_item.dart';
+import './ark_data.dart';
+
+class ArkCategoriesScreen extends StatelessWidget {
+  const ArkCategoriesScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Noahs Ark'),
+      ),
+      body: GridView(
+        children: TEMP_CATEGORIES
+            .map((categoryData) => CategoryItem(
+                  id: categoryData.id,
+                  title: categoryData.title,
+                  backgroundColor: categoryData.backgroundColor,
+                ))
+            .toList(),
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200.0,
+          childAspectRatio: 3.0 / 2.0,
+          crossAxisSpacing: 20.0,
+          mainAxisSpacing: 20.0,
+        ),
+      ),
+    );
+  }
+}
+*/
 import 'package:flutter/material.dart';
 import './productlistitem.dart';
 
 // ignore: must_be_immutable
-class ArkProductsListPage extends StatelessWidget {
-  ArkProductsListPage({Key? key}) : super(key: key);
+class FriendsProductsListPage extends StatelessWidget {
+  FriendsProductsListPage({Key? key}) : super(key: key);
   late BuildContext context;
 
   @override
@@ -15,7 +48,7 @@ class ArkProductsListPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
         title: const Text(
-          "Noah's Ark",
+          "Furry Friends",
           style: TextStyle(
             color: Colors.black,
           ),

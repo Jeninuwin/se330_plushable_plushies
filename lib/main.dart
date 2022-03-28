@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import './HomePage.dart' as first;
-import './productpageark.dart' as second;
-import './productlist.dart' as third;
-import './login.dart' as fourth;
+import './login.dart' as second;
+import './productpageark.dart' as third;
+import './productpagemcdonald.dart' as fourth;
+import './productpageffriends.dart' as fifth;
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       home: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color(0xffffffff),
@@ -37,26 +38,27 @@ class HomePage extends StatelessWidget {
                 Tab(
                   text: 'Home',
                 ),
+                Tab(text: 'Login'),
                 Tab(
                   text: 'Noah\'s Ark',
                 ),
                 Tab(
                     text: 'Old'
                         '\nMcDonald'),
-                //Tab(text: 'Login'),
-                // Tab(text: 'Sale'),
-                // Tab(
-                //     text: 'Furry'
-                //         '\nFriends'),
+                Tab(
+                    text: 'Furry'
+                        '\nFriends'),
+                //Tab(text: 'Sale'),
               ],
             ),
           ),
           body: TabBarView(
             children: <Widget>[
               first.HomePage(),
-              second.ArkCategoriesScreen(),
-              third.ProductsListPage(),
-              fourth.LoginDemo(),
+              second.LoginDemo(),
+              third.ArkProductsListPage(),
+              fourth.McDonaldProductsListPage(),
+              fifth.FriendsProductsListPage()
             ],
           ),
         ),

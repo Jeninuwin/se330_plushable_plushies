@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           children: <Widget>[
-            Row(
+            Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(0.20),
