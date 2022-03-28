@@ -78,7 +78,7 @@ flutter:
     - assets/SnowLeopard.jpg
     - assets/SnowLeopard2.jpg
     - assets/TexedoCat.jpg
-    - assets/wolf.jpg
+    - assets/Wolf.jpg
     - assets/Yorkie.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
