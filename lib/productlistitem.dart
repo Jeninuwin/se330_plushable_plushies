@@ -7,14 +7,15 @@ class ProductsListItem extends StatelessWidget {
   final int currentPrice;
   final int originalPrice;
   final int discount;
-  final String imageUrl;
+  final String image;
 
-  const ProductsListItem({Key? key,
-    required this.name,
-    required this.currentPrice,
-    required this.originalPrice,
-    required this.discount,
-    required this.imageUrl})
+  const ProductsListItem(
+      {Key? key,
+      required this.name,
+      required this.currentPrice,
+      required this.originalPrice,
+      required this.discount,
+      required this.image})
       : super(key: key);
 
   @override
@@ -40,17 +41,14 @@ class ProductsListItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Container(
-              child: Image.network(
-                imageUrl,
+            SizedBox(
+              child: Image.asset(
+                image,
               ),
               height: 250.0,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width / 2.2,
+              width: MediaQuery.of(context).size.width / 2.2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Padding(
@@ -63,9 +61,9 @@ class ProductsListItem extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     name,
-                    style: TextStyle(fontSize: 16.0, color: Colors.grey),
+                    style: const TextStyle(fontSize: 16.0, color: Colors.grey),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 2.0,
                   ),
                   Row(
@@ -74,29 +72,31 @@ class ProductsListItem extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "\$$currentPrice",
-                        style: TextStyle(fontSize: 16.0, color: Colors.black),
+                        style: const TextStyle(
+                            fontSize: 16.0, color: Colors.black),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8.0,
                       ),
                       Text(
                         "\$$originalPrice",
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12.0,
                           color: Colors.grey,
                           decoration: TextDecoration.lineThrough,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8.0,
                       ),
                       Text(
                         "$discount\% off",
-                        style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                        style:
+                            const TextStyle(fontSize: 12.0, color: Colors.grey),
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8.0,
                   ),
                 ],

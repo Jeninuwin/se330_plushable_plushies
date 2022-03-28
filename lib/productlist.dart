@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import './productlistitem.dart';
 
+// ignore: must_be_immutable
 class ProductsListPage extends StatelessWidget {
+  ProductsListPage({Key? key}) : super(key: key);
   late BuildContext context;
 
   @override
@@ -12,7 +14,7 @@ class ProductsListPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "PRODUCT LIST",
           style: TextStyle(
             color: Colors.black,
@@ -33,7 +35,7 @@ class ProductsListPage extends StatelessWidget {
           if (index == 0) {
             return _buildFilterWidgets(screenSize);
           } else if (index == 4) {
-            return SizedBox(
+            return const SizedBox(
               height: 12.0,
             );
           } else {
@@ -73,15 +75,16 @@ class ProductsListPage extends StatelessWidget {
   _buildFilterButton(String title) {
     return InkWell(
       onTap: () {
+        // ignore: avoid_print
         print(title);
       },
       child: Row(
         children: <Widget>[
-          Icon(
+          const Icon(
             Icons.arrow_drop_down,
             color: Colors.black,
           ),
-          SizedBox(
+          const SizedBox(
             width: 2.0,
           ),
           Text(title),
@@ -92,53 +95,47 @@ class ProductsListPage extends StatelessWidget {
 
   _dummyProductsList() {
     return [
-      ProductsListItem(
+      const ProductsListItem(
         name: "Michael Kora",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
-      ProductsListItem(
+      const ProductsListItem(
         name: "Michael Kora",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
-      ProductsListItem(
+      const ProductsListItem(
         name: "David Klin",
         currentPrice: 249,
         originalPrice: 499,
         discount: 50,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
-      ProductsListItem(
+      const ProductsListItem(
         name: "Nakkana",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
-      ProductsListItem(
+      const ProductsListItem(
         name: "David Klin",
         currentPrice: 249,
         originalPrice: 499,
         discount: 20,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
-      ProductsListItem(
+      const ProductsListItem(
         name: "Nakkana",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
-        imageUrl:
-            "assets/images/test.png",
+        image: "assets/images/test.png",
       ),
     ];
   }

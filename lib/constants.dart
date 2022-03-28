@@ -1,3 +1,4 @@
 class Constants {
-  static const String ROUTE_PRODUCT_DETAIL = "/productDetail";
+  // ignore: constant_identifier_names
+  static const String ROUTE_PRODUCT_DETAIL = "/productDetails.dart";
 }

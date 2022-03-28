@@ -10,5 +10,4 @@ class Category {
   final String id;
   final String title;
   final Color backgroundColor;
-  
 }
