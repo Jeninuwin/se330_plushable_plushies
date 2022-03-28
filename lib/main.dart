@@ -32,7 +32,6 @@ class HomePage extends StatelessWidget {
             bottom: const TabBar(
               isScrollable: true,
               tabs: [
-                
                 //https://api.flutter.dev/flutter/material/TabBar-class.html
                 Tab(
                   text: 'Home',
@@ -43,8 +42,7 @@ class HomePage extends StatelessWidget {
                 Tab(
                     text: 'Old'
                         '\nMcDonald'),
-                                Tab(
-                    text: 'Login'),
+                Tab(text: 'Login'),
                 // Tab(text: 'Sale'),
                 // Tab(
                 //     text: 'Furry'
@@ -58,41 +56,6 @@ class HomePage extends StatelessWidget {
               second.ArkCategoriesScreen(),
               third.ProductsListPage()
             ],
-            // child: Column(
-            //   children: <Widget>[
-            //     Row(
-            //       children: [
-            //         Padding(
-            //           padding: const EdgeInsets.all(0.20),
-            //           child: Image.asset('assets/images/test.png'),
-            //         ),
-            //         const Padding(padding: EdgeInsets.all(8.0)),
-            //         RichText(
-            //             text: const TextSpan(children: [
-            //           WidgetSpan(
-            //             child: Icon(
-            //               Icons.arrow_back,
-            //               color: Colors.black,
-            //               size: 20.0,
-            //             ),
-            //           ),
-            //           TextSpan(
-            //             text: 'What\'s Hot',
-            //             style: TextStyle(color: Colors.black),
-            //           ),
-            //           WidgetSpan(
-            //             child: Icon(
-            //               Icons.arrow_forward,
-            //               color: Colors.black,
-            //               size: 20.0,
-            //             ),
-            //           ),
-            //         ]))
-            //       ],
-            //     ),
-            //     Row()
-            //   ],
-            // ),
           ),
         ),
       ),
