@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './HomePage.dart' as first;
 import './productpageArk.dart' as second;
+import './login.dart' as third;
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       home: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color(0xffffffff),
@@ -29,7 +30,9 @@ class HomePage extends StatelessWidget {
             titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),
             centerTitle: true,
             bottom: const TabBar(
+              isScrollable: true,
               tabs: [
+                
                 //https://api.flutter.dev/flutter/material/TabBar-class.html
                 Tab(
                   text: 'Noah\'s Ark',
@@ -37,6 +40,8 @@ class HomePage extends StatelessWidget {
                 Tab(
                     text: 'Old'
                         '\nMcDonald'),
+                                Tab(
+                    text: 'Login'),
                 // Tab(text: 'Sale'),
                 // Tab(
                 //     text: 'Furry'
@@ -44,8 +49,8 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
-          body: const TabBarView(
-            children: <Widget>[first.HomePage(), second.ArkCategoriesScreen()],
+          body: TabBarView(
+            children: <Widget>[first.HomePage(), second.ArkCategoriesScreen(), third.LoginDemo(),],
             // child: Column(
             //   children: <Widget>[
             //     Row(

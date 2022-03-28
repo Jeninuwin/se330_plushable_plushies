@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:se330_plushable_plushies/create_account.dart';
 import 'package:se330_plushable_plushies/main.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:se330_plushable_plushies/profile_page.dart';
 
 
 
@@ -116,7 +117,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 onPressed: () {
                   if(formkey.currentState!.validate()) {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                      context, MaterialPageRoute(builder: (_) => ProfilePage()));
                   }
 
                 },

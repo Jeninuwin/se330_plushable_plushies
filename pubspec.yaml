@@ -61,6 +61,8 @@ flutter:
     - assets/homepage.png
     - assets/test.png
     - assets/plushable_plushie.png
+    - assets/logo_resized.png
+    - assets/resizedaccount.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
