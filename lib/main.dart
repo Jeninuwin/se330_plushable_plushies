@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './HomePage.dart' as first;
 import './productpageark.dart' as second;
 import './productlist.dart' as third;
+import './login.dart' as fourth;
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       home: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
             backgroundColor: const Color(0xffffffff),
@@ -54,7 +55,8 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               first.HomePage(),
               second.ArkCategoriesScreen(),
-              third.ProductsListPage()
+              third.ProductsListPage(),
+              fourth.LoginDemo(),
             ],
           ),
         ),
