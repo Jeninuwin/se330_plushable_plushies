@@ -6,6 +6,6 @@ class Routes {
   static final routes = <String, WidgetBuilder>{
 //    "/productDetail": (BuildContext context) =>
     Constants.ROUTE_PRODUCT_DETAIL: (BuildContext context) =>
-        ProductDetailPage(),
+        const ProductDetailPage(),
   };
 }
