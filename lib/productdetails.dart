@@ -1,16 +1,19 @@
-// ignore_for_file: unnecessary_const, deprecated_member_use
-
 import 'package:flutter/material.dart';
+import 'onlinecategory.dart';
 
 class ProductDetailPage extends StatefulWidget {
-  const ProductDetailPage({Key? key}) : super(key: key);
+  late final Category category;
 
   @override
-  _ProductDetailPageState createState() => _ProductDetailPageState();
+  _ProductDetailPageState createState() => _ProductDetailPageState(category);
 }
 
 class _ProductDetailPageState extends State<ProductDetailPage>
     with TickerProviderStateMixin {
+  final Category category;
+
+  _ProductDetailPageState(this.category);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,12 +144,12 @@ class _ProductDetailPageState extends State<ProductDetailPage>
   }
 
   _buildProductTitleWidget() {
-    return const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(horizontal: 12.0),
-      child: const Center(
+      child: Center(
         child: Text(
           //name,
-          "Nakkana",
+          category.name,
           style: const TextStyle(fontSize: 16.0, color: Colors.black),
         ),
       ),
@@ -155,20 +158,20 @@ class _ProductDetailPageState extends State<ProductDetailPage>
 
   _buildPriceWidgets() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      padding: EdgeInsets.symmetric(horizontal: 12.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           const Text(
-            "\$899",
-            style: const TextStyle(fontSize: 16.0, color: Colors.black),
+            "\${category.salePrice}",
+            style: TextStyle(fontSize: 16.0, color: Colors.black),
           ),
           const SizedBox(
             width: 8.0,
           ),
           const Text(
-            "\$1299",
+            "\${category.regularPrice}",
             style: TextStyle(
               fontSize: 12.0,
               color: Colors.grey,
@@ -179,7 +182,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             width: 8.0,
           ),
           Text(
-            "30% Off",
+            "{category.discount}%",
             style: TextStyle(
               fontSize: 12.0,
               color: Colors.blue[700],
