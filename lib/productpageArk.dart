@@ -63,11 +63,11 @@ class ArkProductsListPage extends StatelessWidget {
     return Container(
       color: Colors.grey[100],
       child: ListView.builder(
-        itemCount: 5,
+        itemCount: 8,
         itemBuilder: (context, index) {
           if (index == 0) {
             return _buildFilterWidgets(screenSize);
-          } else if (index == 4) {
+          } else if (index == 7) {
             return const SizedBox(
               height: 12.0,
             );
@@ -129,11 +129,17 @@ class ArkProductsListPage extends StatelessWidget {
   _dummyProductsList() {
     return [
       const ProductsListItem(
+          name: "name",
+          currentPrice: 1,
+          originalPrice: 1,
+          discount: 1,
+          image: "assets/images/test.png"),
+      const ProductsListItem(
         name: "Bitchon Frise",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
-        image: "assets/images/Bitchon Frise.jpg",
+        image: "assets/images/BichonFrise.jpg",
       ),
       const ProductsListItem(
         name: "Fawn",
@@ -161,14 +167,14 @@ class ArkProductsListPage extends StatelessWidget {
         currentPrice: 249,
         originalPrice: 499,
         discount: 20,
-        image: "assets/images/Lion Cub.jpg",
+        image: "assets/images/LionCub.jpg",
       ),
       const ProductsListItem(
         name: "Otter2",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
-        image: "assets/images/otter 2.jpg",
+        image: "assets/images/otter2.jpg",
       ),
     ];
   }

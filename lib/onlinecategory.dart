@@ -5,6 +5,7 @@ class Category {
   String name;
   int parent;
   String description;
+  //AnyImage image;
   int count;
 
   Category(
@@ -12,5 +13,6 @@ class Category {
       required this.name,
       required this.parent,
       required this.description,
+      //required this.image,
       required this.count});
 }
