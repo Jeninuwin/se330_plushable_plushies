@@ -5,8 +5,8 @@ import 'productdetails.dart';
 
 class ProductsListItem extends StatelessWidget {
   final String name;
-  final int currentPrice;
-  final int originalPrice;
+  final double currentPrice;
+  final double originalPrice;
   final int discount;
   final String image;
 

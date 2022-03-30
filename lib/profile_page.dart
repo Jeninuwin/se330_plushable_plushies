@@ -36,9 +36,9 @@ class ProfilePage extends StatelessWidget {
                             Container(
                                 alignment: Alignment.center,
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(300),
+                                  borderRadius: BorderRadius.circular(800),
                                   child: Image.asset(
-                                      'assets/images/resizedaccount.png', width: 75, height: 75,),
+                                      'assets/images/resizedaccount.png',),
                                 )),
                             const Padding(
                               padding: EdgeInsets.only(
@@ -108,14 +108,14 @@ class ProfilePage extends StatelessWidget {
                                       McDonaldProductsListPage()));
                         },
                         child: Image.asset(
-                          "assets/images/RedPanda.jpg",
+                          "assets/images/sheep.jpg",
                           width: 100,
                           height: 100,
                         ),
                       )),
                   const Align(
                       alignment: Alignment.center,
-                      child: Text(" Miko the Panda     \$15.99")),
+                      child: Text(" Dolly the Sheep     \$16.99")),
                   //Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,),
                   //Text("dsada")
                 ]),
