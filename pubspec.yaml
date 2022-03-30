@@ -30,8 +30,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -70,6 +68,8 @@ flutter:
     - assets/logo_resized.png
     - assets/resizedaccount.png
     - assets/BichonFrise.jpg
+    - assets/BichonFrise2.jpg
+    - assets/BichonFrise3.jpg
     - assets/Fawn.jpg
     - assets/Ferret.jpg
     - assets/Giraffe.jpg
@@ -85,6 +85,8 @@ flutter:
     - assets/SnowLeopard2.jpg
     - assets/TexedoCat.jpg
     - assets/Wolf.jpg
+    - assets/Wolf2.jpg
+    - assets/Wolf3.jpg
     - assets/Yorkie.jpg
     - assets/fox.jpg
     - assets/cow.jpg
@@ -92,6 +94,7 @@ flutter:
     - assets/pig.jpg
     - assets/pony2.jpg
     - assets/sheep.jpg
+    - assets/sheep2.jpg
     - assets/bag.jpeg
     - assets/collar.jpg
     - assets/shirt.jpg
