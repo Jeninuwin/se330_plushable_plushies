@@ -120,8 +120,8 @@ class _LoginDemoState extends State<LoginDemo> {
               child: TextButton(
                 onPressed: () {
                   if(formkey.currentState!.validate()) {
-                    Navigator.push(
-                      context, MaterialPageRoute(builder: (context) => ProfilePage()));
+                    Navigator.pop(
+                      context);
                   }
 
                 },

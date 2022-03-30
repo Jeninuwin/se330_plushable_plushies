@@ -22,8 +22,8 @@ class ProfilePage extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Container(
-                        width: 1000,
-                        height: 200,
+                        width: 500,
+                        height: 210,
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 190, 190, 190),
                             borderRadius: BorderRadius.circular(20.0)),
@@ -36,14 +36,18 @@ class ProfilePage extends StatelessWidget {
                             Container(
                                 alignment: Alignment.center,
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(100),
+                                  borderRadius: BorderRadius.circular(300),
                                   child: Image.asset(
-                                      'assets/images/resizedaccount.png'),
+                                      'assets/images/resizedaccount.png', width: 75, height: 75,),
                                 )),
+                            const Padding(
+                              padding: EdgeInsets.only(
+                                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+                            ),                                
                             const Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                "Full Name: Noah Bentley",
+                                "   Full Name: Noah Bentley",
                                 style: TextStyle(fontSize: 20),
                                 textAlign: TextAlign.left,
                               ),
@@ -51,7 +55,7 @@ class ProfilePage extends StatelessWidget {
                             const Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                "Email: noah.bentley@jacks.sdstate.edu",
+                                "   Email: noah.bentley@jacks.sdstate.edu",
                                 style: TextStyle(fontSize: 20),
                                 textAlign: TextAlign.left,
                               ),
@@ -59,7 +63,7 @@ class ProfilePage extends StatelessWidget {
                             const Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                "Phone Number: 605-555-5555",
+                                "   Phone Number: 605-555-5555",
                                 style: TextStyle(fontSize: 20),
                                 textAlign: TextAlign.left,
                               ),
@@ -72,7 +76,7 @@ class ProfilePage extends StatelessWidget {
                 ),
                 Column(children: <Widget>[
                   Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.center,
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
@@ -87,14 +91,14 @@ class ProfilePage extends StatelessWidget {
                         ),
                       )),
                   const Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.center,
                       child: Text(" Howling Wolf      \$15.99")),
                   const Padding(
                     padding: EdgeInsets.only(top: 30.0),
                   ),
 
                   Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.center,
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
@@ -110,7 +114,7 @@ class ProfilePage extends StatelessWidget {
                         ),
                       )),
                   const Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.center,
                       child: Text(" Miko the Panda     \$15.99")),
                   //Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,),
                   //Text("dsada")
