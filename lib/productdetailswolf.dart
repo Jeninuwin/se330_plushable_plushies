@@ -577,11 +577,11 @@ class _ProductDetailPageState extends State<ProductDetailwolfPage>
                     Image.asset(
                       "assets/images/Wolf.jpg",
                     ),
-                    Image.network(
-                      "https://n1.sdlcdn.com/imgs/c/9/8/Lambency-Brown-Solid-Casual-Blazers-SDL781227769-1-1b660.jpg",
+                    Image.asset(
+                      "assets/images/Wolf2.jpg",
                     ),
-                    Image.network(
-                      "https://images-na.ssl-images-amazon.com/images/I/71O0zS0DT0L._UX342_.jpg",
+                    Image.asset(
+                      "assets/images/Wolf3.jpg",
                     ),
                   ],
                 ),
@@ -740,7 +740,7 @@ class _ProductDetailPageState extends State<ProductDetailwolfPage>
           Container(
             padding:
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
-            height: 150.0,
+            height: 180.0,
             child: TabBarView(
               controller: tabController,
               children: <Widget>[

@@ -577,11 +577,11 @@ class _ProductDetailPageState extends State<ProductDetailmcdonaldPage>
                     Image.asset(
                       "assets/images/sheep.jpg",
                     ),
-                    Image.network(
-                      "https://n1.sdlcdn.com/imgs/c/9/8/Lambency-Brown-Solid-Casual-Blazers-SDL781227769-1-1b660.jpg",
+                    Image.asset(
+                      "assets/images/Sheep2.jpg",
                     ),
-                    Image.network(
-                      "https://images-na.ssl-images-amazon.com/images/I/71O0zS0DT0L._UX342_.jpg",
+                    Image.asset(
+                      "assets/images/Sheep3.jpg",
                     ),
                   ],
                 ),
