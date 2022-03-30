@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:se330_plushable_plushies/credit_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -76,43 +77,13 @@ class SecondRoute extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Next'),
+          child: const Text('NEXT'),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const ThirdRoute()),
+              MaterialPageRoute<void>(builder: (_) => MyApp()),
             );
           },
-        ),
-      ),
-    );
-  }
-}
-
-class ThirdRoute extends StatelessWidget {
-  const ThirdRoute({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.chevron_left,
-            size: 40.0,
-            color: Colors.black,
-          ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        backgroundColor: Colors.white,
-        title: const Text(
-          "CHECKOUT",
-          style: TextStyle(
-            color: Colors.black,
-          ),
         ),
       ),
     );
