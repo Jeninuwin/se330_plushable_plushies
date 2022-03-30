@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:se330_plushable_plushies/productlist.dart';
+import 'package:se330_plushable_plushies/productpageark.dart';
 import 'package:se330_plushable_plushies/productpagemcdonald.dart';
 
 class ProfilePage extends StatelessWidget {
