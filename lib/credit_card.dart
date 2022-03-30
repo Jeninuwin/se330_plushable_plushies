@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:credit_card_input_form/credit_card_input_form.dart';
+import 'package:se330_plushable_plushies/HomePage.dart';
 import 'package:se330_plushable_plushies/login.dart';
 
 class MyApp extends StatefulWidget {
@@ -27,8 +28,8 @@ class _MyAppState extends State<MyApp> {
     borderRadius: BorderRadius.circular(30.0),
     gradient: LinearGradient(
         colors: [
-          const Color(0xfffcdf8a),
-          const Color(0xfff38381),
+          Color.fromARGB(255, 47, 1, 250),
+          Color.fromARGB(255, 253, 253, 253),
         ],
         begin: const FractionalOffset(0.0, 0.0),
         end: const FractionalOffset(1.0, 0.0),
@@ -85,9 +86,60 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
             ),
+            Center(
+                child: RaisedButton(
+                    child: Text('Finish'),
+                    onPressed: () {
+                      showAlertDialog(context);
+                    })),
           ],
         ),
       ),
     );
   }
+}
+
+class MyAlert extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: RaisedButton(
+        child: Text('Show alert'),
+        onPressed: () {
+          showAlertDialog(context);
+        },
+      ),
+    );
+  }
+}
+
+showAlertDialog(BuildContext context) {
+  // Create button
+  Widget okButton = FlatButton(
+    child: Text("OK"),
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const HomePage()),
+      );
+    },
+  );
+
+  // Create AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Text("Order Placed!"),
+    content: Text("Thanks for placing an order with us!"),
+    actions: [
+      okButton,
+    ],
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
 }
