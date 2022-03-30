@@ -4,6 +4,7 @@ import './productpageark.dart' as second;
 import './productpagemcdonald.dart' as third;
 import './productpageffriends.dart' as fourth;
 import 'login.dart';
+import 'package:se330_plushable_plushies/checkout1.dart';
 import 'profile_page.dart';
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
@@ -52,7 +53,7 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute<void>(builder: (_) => ProfilePage()),
+                     MaterialPageRoute<void>(builder: (_) => Checkout()),
                     );
                   },
                 ),
