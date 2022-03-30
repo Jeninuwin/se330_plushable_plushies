@@ -43,6 +43,7 @@ class _CreateAccountState extends State<CreateAccount> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color(0xffffffff),
+        iconTheme: IconThemeData(color: Colors.black),
         title: const Text("Create Account"),        
         titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
 
