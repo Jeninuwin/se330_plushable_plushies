@@ -52,10 +52,61 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 children: [
-                  ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: <Widget>[],
-                  )
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/Yorkie.jpg',
+                          height: 100,
+                        ),
+                        Text('Yorkie Bitch'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/Yorkie.jpg',
+                          height: 100,
+                        ),
+                        Text('Yorkie Hoe'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/Yorkie.jpg',
+                          height: 100,
+                        ),
+                        Text('Yorkie Hoe'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/Yorkie.jpg',
+                          height: 100,
+                        ),
+                        Text('Yorkie Hoe'),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/Yorkie.jpg',
+                          height: 100,
+                        ),
+                        Text('Yorkie Hoe'),
+                      ],
+                    ),
+                  ),
                 ],
               )
             ],
