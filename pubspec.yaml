@@ -89,6 +89,9 @@ flutter:
     - assets/pig.jpg
     - assets/pony2.jpg
     - assets/sheep.jpg
+    - assets/bag.jpeg
+    - assets/collar.jpg
+    - assets/shirt.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
