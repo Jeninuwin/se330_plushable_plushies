@@ -35,15 +35,72 @@ class Checkout extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Checkout'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SecondRoute()),
-            );
-          },
-        ),
+        child: Column(children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 70.0),
+                  ),                  
+                  Align(
+                      alignment: Alignment.center,
+
+                        child: Image.asset(
+                          "assets/images/BichonFrise.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                  const Align(
+                      alignment: Alignment.center,
+                      child: Text(" Marshmallow Maggie      \$11.24    Quantity: 1 \n                                 Size: 6 in")),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                  ),
+                  Align(
+                      alignment: Alignment.center,
+
+                        child: Image.asset(
+                          "assets/images/Wolf.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                  const Align(
+                      alignment: Alignment.center,
+                      child: Text(" Howling Wolf      \$12.79    Quantity: 2 \n                          Size: 8 in")),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 25.0),
+                  ),                     
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text("Subtotal: \$36.82"),
+                    ),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text("Tax: \$4.56"),
+                    ),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text("Shipping: \$6.00"),
+                    ),
+                  const Align(
+                    alignment: Alignment.center,
+                    child: Text("Total: \$47.38", style: TextStyle(fontWeight: FontWeight.bold),),
+                    ),                                                            
+                  const Padding(
+                    padding: EdgeInsets.only(top: 25.0),
+                  ),                                                    
+          
+          ElevatedButton(
+            child: const Text('Checkout'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SecondRoute()),
+              );
+            },
+          ),
+
+        ],)
+
       ),
     );
   }

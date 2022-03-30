@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:se330_plushable_plushies/productdetailsbichon.dart';
+import 'package:se330_plushable_plushies/productdetailssheep.dart';
 import 'package:se330_plushable_plushies/productpageark.dart';
 import 'package:se330_plushable_plushies/productpagemcdonald.dart';
 
@@ -82,7 +84,7 @@ class ProfilePage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ArkProductsListPage()));
+                                  builder: (context) => ProductDetailbichonPage()));
                         },
                         child: Image.asset(
                           "assets/images/BichonFrise.jpg",
@@ -92,7 +94,7 @@ class ProfilePage extends StatelessWidget {
                       )),
                   const Align(
                       alignment: Alignment.center,
-                      child: Text(" Marshmallow Maggie      \$14.99")),
+                      child: Text(" Marshmallow Maggie      \$11.24")),
                   const Padding(
                     padding: EdgeInsets.only(top: 30.0),
                   ),
@@ -105,7 +107,7 @@ class ProfilePage extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                   builder: (context) =>
-                                      McDonaldProductsListPage()));
+                                      ProductDetailmcdonaldPage()));
                         },
                         child: Image.asset(
                           "assets/images/sheep.jpg",
