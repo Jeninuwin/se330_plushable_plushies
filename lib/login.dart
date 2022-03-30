@@ -70,7 +70,7 @@ class _LoginDemoState extends State<LoginDemo> {
               child: Center(
                 child: Container(
                     width: 200,
-                    height: 150,
+                    height: 100,
                     /*decoration: BoxDecoration(
                         color: Colors.red,
                         borderRadius: BorderRadius.circular(50.0)),*/
@@ -121,7 +121,7 @@ class _LoginDemoState extends State<LoginDemo> {
                 onPressed: () {
                   if(formkey.currentState!.validate()) {
                     Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => ProfilePage()));
+                      context, MaterialPageRoute(builder: (context) => ProfilePage()));
                   }
 
                 },

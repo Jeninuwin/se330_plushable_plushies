@@ -30,6 +30,13 @@ class _CreateAccountState extends State<CreateAccount> {
     }
     
   }
+  String validateMobile(String value) {
+// Indian Mobile number are of 10 digit only
+    if (value.length >= 10 && value.length <= 11 )
+      return 'Mobile Number must be of 10 digit';
+    else
+      return null.toString();
+  }  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,9 +75,26 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                 validator: MultiValidator([
                   RequiredValidator(errorText: "* Required"),
+                  //validateMobile
                 ]),
               ),
             ),
+
+            Padding(
+              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+              padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Phone Number',
+                    hintText: 'Enter number as xxx-xxx-xxxx'
+                  ),
+                validator: MultiValidator([
+                  RequiredValidator(errorText: "* Required"),
+                  
+                ]),
+              ),
+            ),            
 
             Padding(
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
@@ -103,6 +127,12 @@ class _CreateAccountState extends State<CreateAccount> {
                 ]),
               ),
             ),
+
+            const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+            ),
+                          
             Container(
               height: 50,
               width: 250,
@@ -111,8 +141,8 @@ class _CreateAccountState extends State<CreateAccount> {
               child: TextButton(
                 onPressed: () {
                   if(formkey.currentState!.validate()) {
-                    Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => LoginDemo()));
+                    Navigator.pop(
+                      context);
                   }
                 },
                 child:  const Text(
