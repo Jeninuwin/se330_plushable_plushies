@@ -32,7 +32,7 @@ class ArkCategoriesScreen extends StatelessWidget {
 }
 */
 import 'package:flutter/material.dart';
-import './productlistitem.dart';
+import 'productlistitemArk.dart';
 
 // ignore: must_be_immutable
 class ArkProductsListPage extends StatelessWidget {
@@ -126,64 +126,64 @@ class ArkProductsListPage extends StatelessWidget {
     );
   }
 
-   _dummyProductsList() {
+  _dummyProductsList() {
     return [
-      const ProductsListItem(
+      const ProductsListItemArk(
           name: "name",
           currentPrice: 1.00,
           originalPrice: 1.00,
           discount: 1,
           image: "assets/images/test.png"),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Gerald the Giraffe",
         currentPrice: 11.99,
         originalPrice: 15.99,
         discount: 25,
         image: "assets/images/Giraffe.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Miko the Panda",
         currentPrice: 11.99,
         originalPrice: 15.99,
         discount: 25,
         image: "assets/images/RedPanda.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Floatin' Otter",
         currentPrice: 7.99,
         originalPrice: 15.99,
         discount: 50,
         image: "assets/images/otter.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Playfull Ferret",
         currentPrice: 12.31,
         originalPrice: 15.99,
         discount: 23,
         image: "assets/images/Ferret.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Howling Wolf",
         currentPrice: 12.79,
         originalPrice: 15.99,
         discount: 20,
         image: "assets/images/Wolf.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Bambi the Deer",
         currentPrice: 12.31,
         originalPrice: 15.99,
         discount: 23,
         image: "assets/images/Fawn.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Snuggly Snowy",
         currentPrice: 12.31,
         originalPrice: 15.99,
         discount: 23,
         image: "assets/images/SnowLeopard.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemArk(
         name: "Kipper the Cub",
         currentPrice: 12.31,
         originalPrice: 15.99,

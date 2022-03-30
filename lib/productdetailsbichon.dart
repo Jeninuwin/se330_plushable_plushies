@@ -432,12 +432,12 @@ import 'login.dart';
 import 'package:se330_plushable_plushies/checkout1.dart';
 import 'profile_page.dart';
 
-class ProductDetailPage extends StatefulWidget {
+class ProductDetailbichonPage extends StatefulWidget {
   @override
   _ProductDetailPageState createState() => _ProductDetailPageState();
 }
 
-class _ProductDetailPageState extends State<ProductDetailPage>
+class _ProductDetailPageState extends State<ProductDetailbichonPage>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
@@ -495,7 +495,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
         }),
         backgroundColor: Colors.white,
         title: const Text(
-          "PRODUCT DETAIL",
+          "Old McDonald",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -561,7 +561,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
-        height: 250.0,
+        height: 300.0,
         child: Center(
           child: DefaultTabController(
             length: 3,
@@ -570,8 +570,8 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                 TabBarView(
                   controller: imagesController,
                   children: <Widget>[
-                    Image.network(
-                      "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1304671/2016/4/14/11460624898615-Hancock-Men-Shirts-8481460624898035-1_mini.jpg",
+                    Image.asset(
+                      "assets/images/BichonFrise.jpg",
                     ),
                     Image.network(
                       "https://n1.sdlcdn.com/imgs/c/9/8/Lambency-Brown-Solid-Casual-Blazers-SDL781227769-1-1b660.jpg",
@@ -603,7 +603,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
       child: const Center(
         child: Text(
           //name,
-          "Nakkana",
+          "Marshmallow Maggie",
           style: const TextStyle(fontSize: 16.0, color: Colors.black),
         ),
       ),
@@ -618,29 +618,11 @@ class _ProductDetailPageState extends State<ProductDetailPage>
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           const Text(
-            "\$899",
+            "\$14.99",
             style: const TextStyle(fontSize: 16.0, color: Colors.black),
           ),
           const SizedBox(
             width: 8.0,
-          ),
-          const Text(
-            "\$1299",
-            style: TextStyle(
-              fontSize: 12.0,
-              color: Colors.grey,
-              decoration: TextDecoration.lineThrough,
-            ),
-          ),
-          const SizedBox(
-            width: 8.0,
-          ),
-          Text(
-            "30% Off",
-            style: TextStyle(
-              fontSize: 12.0,
-              color: Colors.blue[700],
-            ),
           ),
         ],
       ),
@@ -716,12 +698,12 @@ class _ProductDetailPageState extends State<ProductDetailPage>
           Container(
             padding:
                 const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
-            height: 100.0,
+            height: 150.0,
             child: TabBarView(
               controller: tabController,
               children: <Widget>[
                 Text(
-                  "Description",
+                  "Maggie is a sweet girl that will always love you, no matter what. Once you hold her, she'll never forget you.\n\n Fiber fill made from 100% recycled plastics\n Cloth labels made from 100% recycled materials\n Plastics pellets made from recycled plastics\n Hang tags are recyclable\n Your new best friend is built to last!",
                   style: TextStyle(
                     color: Colors.black,
                   ),
@@ -737,16 +719,15 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                           ),
                         ),
                         Icon(Icons.star),
-                        Icon(Icons.star),
-                        Icon(Icons.star),
-                        Icon(Icons.star),
-                        Icon(Icons.star_outline)
+                        Icon(Icons.star_outline),
+                        Icon(Icons.star_outline),
+                        Icon(Icons.star_outline),
+                        Icon(Icons.start_outlined)
                       ],
                     ),
                     Row(
                       children: [
-                        Text(
-                            "I weawwy wiked the pwushie. I cuddwe with iwt evewy\n night!")
+                        Text("My cat tore the ear off almost immediately!")
                       ],
                     ),
                   ],
@@ -797,7 +778,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
             flex: 2,
             child: RaisedButton(
               onPressed: () {},
-              color: Colors.greenAccent,
+              color: Color.fromARGB(255, 225, 143, 149),
               child: Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

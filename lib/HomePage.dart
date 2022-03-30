@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/src/rendering/box.dart';
-import 'package:se330_plushable_plushies/productlistitem.dart';
+import 'package:se330_plushable_plushies/productlistitemArk.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

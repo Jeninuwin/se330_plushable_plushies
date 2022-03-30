@@ -32,7 +32,7 @@ class ArkCategoriesScreen extends StatelessWidget {
 }
 */
 import 'package:flutter/material.dart';
-import './productlistitem.dart';
+import 'productlistitemffriends.dart';
 
 // ignore: must_be_immutable
 class FriendsProductsListPage extends StatelessWidget {
@@ -128,42 +128,42 @@ class FriendsProductsListPage extends StatelessWidget {
 
   _dummyProductsList() {
     return [
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Fuzzy Shiro",
         currentPrice: 11.24,
         originalPrice: 14.99,
         discount: 25,
         image: "assets/images/Pomeranian.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Marshmallow Maggie",
         currentPrice: 11.24,
         originalPrice: 14.99,
         discount: 25,
         image: "assets/images/BichonFrise.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Mischievous Kitty",
         currentPrice: 7.49,
         originalPrice: 14.99,
         discount: 50,
         image: "assets/images/OrangeTabbyCat.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Chatty Bella",
         currentPrice: 11.54,
         originalPrice: 14.99,
         discount: 23,
         image: "assets/images/Yorkie.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Fancy Oreo",
         currentPrice: 11.99,
         originalPrice: 14.99,
         discount: 20,
         image: "assets/images/TexedoCat.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemffriends(
         name: "Hyper Asher",
         currentPrice: 11.54,
         originalPrice: 14.99,
