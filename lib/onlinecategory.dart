@@ -1,18 +1,20 @@
+import 'package:flutter/cupertino.dart';
+
 import './anyimage.dart';
 
 class Category {
-  int id;
   String name;
-  int parent;
-  String description;
+  int currentPrice;
+  int originalPrice;
+  int discount;
   //AnyImage image;
-  int count;
+  String image;
 
   Category(
-      {required this.id,
-      required this.name,
-      required this.parent,
-      required this.description,
+      {required this.name,
+      required this.currentPrice,
+      required this.originalPrice,
+      required this.discount,
       //required this.image,
-      required this.count});
+      required this.image});
 }
