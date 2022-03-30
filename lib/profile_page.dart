@@ -42,76 +42,85 @@ class ProfilePage extends StatelessWidget {
                                 )),
                             const Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("Full Name: Noah Bentley", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
+                              child: Text(
+                                "Full Name: Noah Bentley",
+                                style: TextStyle(fontSize: 20),
+                                textAlign: TextAlign.left,
                               ),
+                            ),
                             const Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("Email: noah.bentley@jacks.sdstate.edu", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
+                              child: Text(
+                                "Email: noah.bentley@jacks.sdstate.edu",
+                                style: TextStyle(fontSize: 20),
+                                textAlign: TextAlign.left,
                               ),
+                            ),
                             const Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("Phone Number: 605-555-5555", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
-                              ),                                                                
+                              child: Text(
+                                "Phone Number: 605-555-5555",
+                                style: TextStyle(fontSize: 20),
+                                textAlign: TextAlign.left,
+                              ),
+                            ),
                           ],
                         ))),
                 const Padding(
                   padding: EdgeInsets.only(
                       left: 15.0, right: 15.0, top: 15, bottom: 0),
                 ),
-                Column(
-                  
-                  
-                  children:<Widget>[
-                      
-                    Align(
+                Column(children: <Widget>[
+                  Align(
                       alignment: Alignment.centerLeft,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ArkProductsListPage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ArkProductsListPage()));
                         },
-                        child: Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,), )
-                      
-
-                    ),
-                    const Align(
+                        child: Image.asset(
+                          "assets/images/Wolf.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      )),
+                  const Align(
                       alignment: Alignment.centerLeft,
+                      child: Text(" Howling Wolf      \$15.99")),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                  ),
 
-                      child: Text(" Howling Wolf      \$15.99")
-
-                    ),
-                    const Padding(
-                    padding:  EdgeInsets.only(top: 30.0),
-                    ),
-
-                    Align(
+                  Align(
                       alignment: Alignment.centerLeft,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => McDonaldProductsListPage()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      McDonaldProductsListPage()));
                         },
-                        child: Image.asset("assets/images/RedPanda.jpg", width: 100, height: 100,), )
-                      
-
-                    ),
-                    const Align(
+                        child: Image.asset(
+                          "assets/images/RedPanda.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      )),
+                  const Align(
                       alignment: Alignment.centerLeft,
-
-                      child: Text(" Miko the Panda     \$15.99")
-
-                    ),                    
-                    //Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,),
-                    //Text("dsada")
-                  ]
-                  
-                ),
-                
+                      child: Text(" Miko the Panda     \$15.99")),
+                  //Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,),
+                  //Text("dsada")
+                ]),
                 Padding(
                     padding: const EdgeInsets.only(top: 30.0),
                     child: Column(children: const <Widget>[]))
               ],
             ),
           ),
-          
         ));
   }
 }
