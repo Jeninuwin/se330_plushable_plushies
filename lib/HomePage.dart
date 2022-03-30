@@ -27,77 +27,60 @@ class _HomePageState extends State<HomePage> {
                     child: Image.asset('assets/images/test.png'),
                   ),
                   const Padding(padding: EdgeInsets.all(8.0)),
-                  RichText(
-                      text: const TextSpan(children: [
-                    WidgetSpan(
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Colors.black,
-                        size: 20.0,
+                  const Text(
+                    'What\'s Hot\n',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/Yorkie.jpg',
+                              height: 100,
+                            ),
+                            Text('Yorkie Bitch'),
+                          ],
+                        ),
                       ),
-                    ),
-                    TextSpan(
-                      text: 'What\'s Hot',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    WidgetSpan(
-                      child: Icon(
-                        Icons.arrow_forward,
-                        color: Colors.black,
-                        size: 20.0,
+                      Expanded(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/Yorkie.jpg',
+                              height: 100,
+                            ),
+                            Text('Yorkie Hoe'),
+                          ],
+                        ),
                       ),
-                    ),
-                  ])),
+                      Expanded(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/Yorkie.jpg',
+                              height: 100,
+                            ),
+                            Text('Yorkie Hoe'),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/images/Yorkie.jpg',
+                              height: 100,
+                            ),
+                            Text('Yorkie Hoe'),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/Yorkie.jpg',
-                          height: 100,
-                        ),
-                        Text('Yorkie Bitch'),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/Yorkie.jpg',
-                          height: 100,
-                        ),
-                        Text('Yorkie Hoe'),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/Yorkie.jpg',
-                          height: 100,
-                        ),
-                        Text('Yorkie Hoe'),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/Yorkie.jpg',
-                          height: 100,
-                        ),
-                        Text('Yorkie Hoe'),
-                      ],
-                    ),
-                  ),
-                ],
-              )
             ],
           ),
         ),
