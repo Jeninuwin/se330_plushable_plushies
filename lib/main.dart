@@ -4,6 +4,7 @@ import './login.dart' as second;
 import './productpageark.dart' as third;
 import './productpagemcdonald.dart' as fourth;
 import './productpageffriends.dart' as fifth;
+import 'login.dart';
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
@@ -23,43 +24,60 @@ class HomePage extends StatelessWidget {
           labelStyle: TextStyle(color: Colors.black),
         ),
       ),
-      home: DefaultTabController(
-        length: 5,
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: const Color(0xffffffff),
-            title: const Text('Plushable Plushies'),
-            titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),
-            centerTitle: true,
-            bottom: const TabBar(
-              isScrollable: true,
-              tabs: [
-                //https://api.flutter.dev/flutter/material/TabBar-class.html
-                Tab(
-                  text: 'Home',
+      home: Builder(
+        builder: (context) => DefaultTabController(
+          length: 5,
+          child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: const Color(0xffffffff),
+              title: const Text('Plushable Plushies'),
+              actions: <Widget>[
+                IconButton(
+                  icon: const Icon(
+                    Icons.login,
+                    color: Colors.amber,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(builder: (_) => LoginDemo()),
+                    );
+                  },
                 ),
-                Tab(text: 'Login'),
-                Tab(
-                  text: 'Noah\'s Ark',
-                ),
-                Tab(
-                    text: 'Old'
-                        '\nMcDonald'),
-                Tab(
-                    text: 'Furry'
-                        '\nFriends'),
-                //Tab(text: 'Sale'),
+              ],
+              titleTextStyle:
+                  const TextStyle(color: Colors.black, fontSize: 25),
+              centerTitle: true,
+              bottom: const TabBar(
+                isScrollable: true,
+                tabs: [
+                  //https://api.flutter.dev/flutter/material/TabBar-class.html
+                  Tab(
+                    text: 'Home',
+                  ),
+                  Tab(text: 'Login'),
+                  Tab(
+                    text: 'Noah\'s Ark',
+                  ),
+                  Tab(
+                      text: 'Old'
+                          '\nMcDonald'),
+                  Tab(
+                      text: 'Furry'
+                          '\nFriends'),
+                  //Tab(text: 'Sale'),
+                ],
+              ),
+            ),
+            body: TabBarView(
+              children: <Widget>[
+                first.HomePage(),
+                second.LoginDemo(),
+                third.ArkProductsListPage(),
+                fourth.McDonaldProductsListPage(),
+                fifth.FriendsProductsListPage()
               ],
             ),
-          ),
-          body: TabBarView(
-            children: <Widget>[
-              first.HomePage(),
-              second.LoginDemo(),
-              third.ArkProductsListPage(),
-              fourth.McDonaldProductsListPage(),
-              fifth.FriendsProductsListPage()
-            ],
           ),
         ),
       ),

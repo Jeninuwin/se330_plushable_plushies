@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+      body: Center(
         child: Center(
           child: Column(
             children: <Widget>[
@@ -60,17 +60,6 @@ class _HomePageState extends State<HomePage> {
                           height: 100,
                         ),
                         Text('Yorkie Bitch'),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/images/Yorkie.jpg',
-                          height: 100,
-                        ),
-                        Text('Yorkie Hoe'),
                       ],
                     ),
                   ),
