@@ -5,6 +5,7 @@ import './productpageark.dart' as third;
 import './productpagemcdonald.dart' as fourth;
 import './productpageffriends.dart' as fifth;
 import 'login.dart';
+import 'profile_page.dart';
 
 //routing so far. set the page you want by importing it here as ./[page name] following the next number.
 //for example: import './login.dart' as fourth; then you would go to the body and list it as follows: fourth.[name of class](). That's it.
@@ -34,6 +35,32 @@ class HomePage extends StatelessWidget {
               actions: <Widget>[
                 IconButton(
                   icon: const Icon(
+                    Icons.favorite,
+                    color: Colors.amber,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(builder: (_) => ProfilePage()),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(
+                    Icons.shopping_cart,
+                    color: Colors.amber,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<void>(builder: (_) => ProfilePage()),
+                    );
+                  },
+                ),
+              ],
+              leading: Builder(builder: (BuildContext context) {
+                return IconButton(
+                  icon: const Icon(
                     Icons.login,
                     color: Colors.amber,
                   ),
@@ -43,8 +70,8 @@ class HomePage extends StatelessWidget {
                       MaterialPageRoute<void>(builder: (_) => LoginDemo()),
                     );
                   },
-                ),
-              ],
+                );
+              }),
               titleTextStyle:
                   const TextStyle(color: Colors.black, fontSize: 25),
               centerTitle: true,
