@@ -53,12 +53,13 @@ class _LoginDemoState extends State<LoginDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   backgroundColor: const Color(0xffffffff),
-      //   title: Text("Login Page"),        
-      //   titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
+       appBar: AppBar(
+         backgroundColor: const Color(0xffffffff),
+         //title: Text("Login Page"),        
+         //titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),
+         iconTheme: IconThemeData(color: Colors.black),        
 
-      // ),
+       ),
       body: SingleChildScrollView(
         child: Form(
           autovalidateMode: AutovalidateMode.always,
