@@ -34,8 +34,10 @@ class ProductsListItem extends StatelessWidget {
   _buildProductItemCard(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => ProductDetailPage()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (BuildContext context) => ProductDetailPage()));
       },
       child: Card(
         elevation: 4.0,
