@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:se330_plushable_plushies/checkout2.dart';
+import 'credit_card.dart';
 
 void main() {
   runApp(const MaterialApp(
