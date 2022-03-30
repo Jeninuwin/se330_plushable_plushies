@@ -126,55 +126,69 @@ class ArkProductsListPage extends StatelessWidget {
     );
   }
 
-  _dummyProductsList() {
+   _dummyProductsList() {
     return [
       const ProductsListItem(
           name: "name",
-          currentPrice: 1,
-          originalPrice: 1,
+          currentPrice: 1.00,
+          originalPrice: 1.00,
           discount: 1,
           image: "assets/images/test.png"),
       const ProductsListItem(
-        name: "Bitchon Frise",
-        currentPrice: 524,
-        originalPrice: 699,
+        name: "Gerald the Giraffe",
+        currentPrice: 11.99,
+        originalPrice: 15.99,
         discount: 25,
-        image: "assets/images/BichonFrise.jpg",
-      ),
-      const ProductsListItem(
-        name: "Fawn",
-        currentPrice: 524,
-        originalPrice: 699,
-        discount: 25,
-        image: "assets/images/Fawn.jpg",
-      ),
-      const ProductsListItem(
-        name: "Giraffe",
-        currentPrice: 249,
-        originalPrice: 499,
-        discount: 50,
         image: "assets/images/Giraffe.jpg",
       ),
       const ProductsListItem(
-        name: "Ferret",
-        currentPrice: 899,
-        originalPrice: 1299,
+        name: "Miko the Panda",
+        currentPrice: 11.99,
+        originalPrice: 15.99,
+        discount: 25,
+        image: "assets/images/RedPanda.jpg",
+      ),
+      const ProductsListItem(
+        name: "Floatin' Otter",
+        currentPrice: 7.99,
+        originalPrice: 15.99,
+        discount: 50,
+        image: "assets/images/otter.jpg",
+      ),
+      const ProductsListItem(
+        name: "Playfull Ferret",
+        currentPrice: 12.31,
+        originalPrice: 15.99,
         discount: 23,
         image: "assets/images/Ferret.jpg",
       ),
       const ProductsListItem(
-        name: "Lion Cub",
-        currentPrice: 249,
-        originalPrice: 499,
+        name: "Howling Wolf",
+        currentPrice: 12.79,
+        originalPrice: 15.99,
         discount: 20,
-        image: "assets/images/LionCub.jpg",
+        image: "assets/images/Wolf.jpg",
       ),
       const ProductsListItem(
-        name: "Otter2",
-        currentPrice: 899,
-        originalPrice: 1299,
+        name: "Bambi the Deer",
+        currentPrice: 12.31,
+        originalPrice: 15.99,
         discount: 23,
-        image: "assets/images/otter2.jpg",
+        image: "assets/images/Fawn.jpg",
+      ),
+      const ProductsListItem(
+        name: "Snuggly Snowy",
+        currentPrice: 12.31,
+        originalPrice: 15.99,
+        discount: 23,
+        image: "assets/images/SnowLeopard.jpg",
+      ),
+      const ProductsListItem(
+        name: "Kipper the Cub",
+        currentPrice: 12.31,
+        originalPrice: 15.99,
+        discount: 23,
+        image: "assets/images/LionCub.jpg",
       ),
     ];
   }

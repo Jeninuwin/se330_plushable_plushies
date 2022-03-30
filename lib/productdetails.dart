@@ -428,6 +428,9 @@
 // ignore_for_file: unnecessary_const
 
 import 'package:flutter/material.dart';
+import 'login.dart';
+import 'package:se330_plushable_plushies/checkout1.dart';
+import 'profile_page.dart';
 
 class ProductDetailPage extends StatefulWidget {
   @override
@@ -441,16 +444,55 @@ class _ProductDetailPageState extends State<ProductDetailPage>
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.chevron_left,
-            size: 40.0,
-            color: Colors.black,
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(
+              Icons.favorite,
+              color: Colors.amber,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(builder: (_) => ProfilePage()),
+              );
+            },
           ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
+          IconButton(
+            icon: const Icon(
+              Icons.shopping_cart,
+              color: Colors.amber,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(builder: (_) => Checkout()),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(
+              Icons.login,
+              color: Colors.amber,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(builder: (_) => LoginDemo()),
+              );
+            },
+          ),
+        ],
+        leading: Builder(builder: (BuildContext context) {
+          return IconButton(
+              icon: const Icon(
+                Icons.chevron_left,
+                size: 40.0,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              });
+        }),
         backgroundColor: Colors.white,
         title: const Text(
           "PRODUCT DETAIL",
@@ -736,14 +778,14 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
                     Icon(
-                      Icons.list,
+                      Icons.favorite,
                       color: Colors.white,
                     ),
                     SizedBox(
                       width: 4.0,
                     ),
                     Text(
-                      "SAVE",
+                      "FAVORITE",
                       style: TextStyle(color: Colors.white),
                     ),
                   ],
@@ -767,10 +809,7 @@ class _ProductDetailPageState extends State<ProductDetailPage>
                     SizedBox(
                       width: 4.0,
                     ),
-                    Text(
-                      "ADD TO CART",
-                      style: TextStyle(color: Colors.white),
-                    ),
+                    Text("ADD TO CART", style: TextStyle(color: Colors.white)),
                   ],
                 ),
               ),
