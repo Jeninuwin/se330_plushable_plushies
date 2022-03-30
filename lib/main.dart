@@ -3,6 +3,7 @@ import './HomePage.dart' as first;
 import './productpageark.dart' as second;
 import './productpagemcdonald.dart' as third;
 import './productpageffriends.dart' as fourth;
+import './productpageaccessory.dart' as fifth;
 import 'login.dart';
 import 'package:se330_plushable_plushies/checkout1.dart';
 import 'profile_page.dart';
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
       ),
       home: Builder(
         builder: (context) => DefaultTabController(
-          length: 4,
+          length: 5,
           child: Scaffold(
             appBar: AppBar(
               backgroundColor: const Color(0xffffffff),
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                     MaterialPageRoute<void>(builder: (_) => Checkout()),
+                      MaterialPageRoute<void>(builder: (_) => Checkout()),
                     );
                   },
                 ),
@@ -91,7 +92,7 @@ class HomePage extends StatelessWidget {
                   Tab(
                       text: 'Furry'
                           '\nFriends'),
-                  //Tab(text: 'Sale'),
+                  Tab(text: 'Accessories'),
                 ],
               ),
             ),
@@ -100,7 +101,8 @@ class HomePage extends StatelessWidget {
                 first.HomePage(),
                 second.ArkProductsListPage(),
                 third.McDonaldProductsListPage(),
-                fourth.FriendsProductsListPage()
+                fourth.FriendsProductsListPage(),
+                fifth.AccessoryProductsListPage()
               ],
             ),
           ),

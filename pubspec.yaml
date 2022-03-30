@@ -30,6 +30,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -37,6 +39,7 @@ dependencies:
   carousel_slider: ^4.0.0
   flutter_swiper: ^1.1.6
   flutter_credit_card: ^0.1.4
+  credit_card_input_form: ^2.0.4
 
 dev_dependencies:
   flutter_test:

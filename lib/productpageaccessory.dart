@@ -96,6 +96,12 @@ class AccessoryProductsListPage extends StatelessWidget {
   _dummyProductsList() {
     return [
       const ProductsListItem(
+          name: "a",
+          currentPrice: 1,
+          originalPrice: 1,
+          discount: 1,
+          image: "a"),
+      const ProductsListItem(
         name: "Collars",
         currentPrice: 3.99,
         originalPrice: 8.99,
