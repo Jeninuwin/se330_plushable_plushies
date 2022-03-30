@@ -53,12 +53,12 @@ class _LoginDemoState extends State<LoginDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: const Color(0xffffffff),
-        title: Text("Login Page"),        
-        titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
+      // appBar: AppBar(
+      //   backgroundColor: const Color(0xffffffff),
+      //   title: Text("Login Page"),        
+      //   titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),        
 
-      ),
+      // ),
       body: SingleChildScrollView(
         child: Form(
           autovalidateMode: AutovalidateMode.always,
@@ -108,6 +108,10 @@ class _LoginDemoState extends State<LoginDemo> {
                 ]),
               ),
             ),
+            const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+            ),            
             Container(
               height: 50,
               width: 250,
