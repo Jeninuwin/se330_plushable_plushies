@@ -24,9 +24,15 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(0.20),
-                    child: Image.asset('assets/images/test.png'),
+                    child: Image.asset(
+                      'assets/images/test.png',
+                      height: 190,
+                      width: 350,
+                    ),
                   ),
-                  const Padding(padding: EdgeInsets.all(8.0)),
+                  const Padding(
+                      padding: EdgeInsets.only(
+                          left: 15.0, right: 15.0, top: 15.0, bottom: 0)),
                   const Text(
                     'What\'s Hot\n',
                     style: TextStyle(fontSize: 20),
@@ -37,10 +43,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/chicken.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Bitch'),
+                            Text('Chica Chick'),
                           ],
                         ),
                       ),
@@ -48,10 +54,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/otter.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Hoe'),
+                            Text('Floatin Otter'),
                           ],
                         ),
                       ),
@@ -59,10 +65,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/TexedoCat.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Hoe'),
+                            Text('Fancy Oreo'),
                           ],
                         ),
                       ),
@@ -70,10 +76,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/pig.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Hoe'),
+                            Text('Petunia Pig'),
                           ],
                         ),
                       ),
@@ -81,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   const Padding(padding: EdgeInsets.all(8.0)),
                   const Text(
-                    'What\'s Hot\n',
+                    'Noah\'s Ark\n',
                     style: TextStyle(fontSize: 20),
                   ),
                   Row(
@@ -90,10 +96,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/Wolf.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Bitch'),
+                            Text('Howling Wolf'),
                           ],
                         ),
                       ),
@@ -101,10 +107,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/SnowLeopard.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Hoe'),
+                            Text('Snuggly Snowy'),
                           ],
                         ),
                       ),
@@ -112,21 +118,10 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           children: <Widget>[
                             Image.asset(
-                              'assets/images/Yorkie.jpg',
+                              'assets/images/LionCub.jpg',
                               height: 100,
                             ),
-                            Text('Yorkie Hoe'),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: <Widget>[
-                            Image.asset(
-                              'assets/images/Yorkie.jpg',
-                              height: 100,
-                            ),
-                            Text('Yorkie Hoe'),
+                            Text('Kipper the Cub'),
                           ],
                         ),
                       ),

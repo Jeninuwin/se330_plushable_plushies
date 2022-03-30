@@ -63,11 +63,11 @@ class FriendsProductsListPage extends StatelessWidget {
     return Container(
       color: Colors.grey[100],
       child: ListView.builder(
-        itemCount: 5,
+        itemCount: 8,
         itemBuilder: (context, index) {
           if (index == 0) {
             return _buildFilterWidgets(screenSize);
-          } else if (index == 4) {
+          } else if (index == 7) {
             return const SizedBox(
               height: 12.0,
             );
@@ -128,6 +128,13 @@ class FriendsProductsListPage extends StatelessWidget {
 
   _dummyProductsList() {
     return [
+      const ProductsListItemffriends(
+        name: "Fuzzy Shiro",
+        currentPrice: 11.24,
+        originalPrice: 14.99,
+        discount: 25,
+        image: "assets/images/Pomeranian.jpg",
+      ),
       const ProductsListItemffriends(
         name: "Fuzzy Shiro",
         currentPrice: 11.24,

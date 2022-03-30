@@ -527,6 +527,10 @@ class _ProductDetailPageState extends State<ProductDetailwolfPage>
                 const SizedBox(height: 12.0),
                 _buildDivider(screenSize),
                 const SizedBox(height: 12.0),
+                _buildQuantityWidget(),
+                const SizedBox(
+                  height: 12.0,
+                ),
                 _buildSizeChartWidgets(),
                 const SizedBox(height: 12.0),
                 _buildDetailsAndMaterialWidgets(),
@@ -624,6 +628,44 @@ class _ProductDetailPageState extends State<ProductDetailwolfPage>
           const SizedBox(
             width: 8.0,
           ),
+        ],
+      ),
+    );
+  }
+
+  _buildQuantityWidget() {
+    var dropdownValue;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Icon(
+                Icons.numbers,
+                color: Colors.grey[600],
+              ),
+              const SizedBox(
+                width: 12.0,
+              ),
+              Text(
+                "Quantity",
+                style: TextStyle(
+                  color: Colors.grey[600],
+                ),
+              ),
+            ],
+          ),
+          const MyStatefulWidget2(),
+          // Text(
+          //   "SIZE CHART",
+          //   style: TextStyle(
+          //     color: Colors.blue[400],
+          //     fontSize: 12.0,
+          //   ),
+          // ),
         ],
       ),
     );
@@ -829,6 +871,43 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         });
       },
       items: <String>['6 Inch', '8 Inch', '10 Inch']
+          .map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
+  }
+}
+
+class MyStatefulWidget2 extends StatefulWidget {
+  const MyStatefulWidget2({Key? key}) : super(key: key);
+
+  @override
+  State<MyStatefulWidget2> createState() => _MyStatefulWidgetState2();
+}
+
+class _MyStatefulWidgetState2 extends State<MyStatefulWidget2> {
+  String dropdownValue = 'One';
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String? newValue) {
+        setState(() {
+          dropdownValue = newValue!;
+        });
+      },
+      items: <String>['One', 'Two', 'Three']
           .map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
