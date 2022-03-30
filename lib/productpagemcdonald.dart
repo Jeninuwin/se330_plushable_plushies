@@ -32,7 +32,7 @@ class ArkCategoriesScreen extends StatelessWidget {
 }
 */
 import 'package:flutter/material.dart';
-import './productlistitem.dart';
+import 'productlistitemmcdonald.dart';
 
 // ignore: must_be_immutable
 class McDonaldProductsListPage extends StatelessWidget {
@@ -128,42 +128,42 @@ class McDonaldProductsListPage extends StatelessWidget {
 
   _dummyProductsList() {
     return [
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Bitchon Frise",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
         image: "assets/images/Bitchon Frise.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Fawn",
         currentPrice: 524,
         originalPrice: 699,
         discount: 25,
         image: "assets/images/Fawn.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Giraffe",
         currentPrice: 249,
         originalPrice: 499,
         discount: 50,
         image: "assets/images/Giraffe.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Ferret",
         currentPrice: 899,
         originalPrice: 1299,
         discount: 23,
         image: "assets/images/Ferret.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Lion Cub",
         currentPrice: 249,
         originalPrice: 499,
         discount: 20,
         image: "assets/images/Lion Cub.jpg",
       ),
-      const ProductsListItem(
+      const ProductsListItemmcdonald(
         name: "Otter2",
         currentPrice: 899,
         originalPrice: 1299,

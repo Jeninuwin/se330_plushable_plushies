@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import './constants.dart';
 import './routes.dart';
-import 'productdetails.dart';
+import 'productdetailswolf.dart';
 
-class ProductsListItem extends StatelessWidget {
+class ProductsListItemArk extends StatelessWidget {
   final String name;
-  final int currentPrice;
-  final int originalPrice;
+  final double currentPrice;
+  final double originalPrice;
   final int discount;
   final String image;
 
-  const ProductsListItem(
+  const ProductsListItemArk(
       {Key? key,
       required this.name,
       required this.currentPrice,
@@ -37,7 +37,7 @@ class ProductsListItem extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (BuildContext context) => ProductDetailPage()));
+                builder: (BuildContext context) => ProductDetailwolfPage()));
       },
       child: Card(
         elevation: 4.0,
@@ -81,22 +81,6 @@ class ProductsListItem extends StatelessWidget {
                       ),
                       const SizedBox(
                         width: 8.0,
-                      ),
-                      Text(
-                        "\$$originalPrice",
-                        style: const TextStyle(
-                          fontSize: 12.0,
-                          color: Colors.grey,
-                          decoration: TextDecoration.lineThrough,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 8.0,
-                      ),
-                      Text(
-                        "$discount\% off",
-                        style:
-                            const TextStyle(fontSize: 12.0, color: Colors.grey),
                       ),
                     ],
                   ),
