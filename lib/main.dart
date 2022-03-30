@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import './HomePage.dart' as first;
-import './login.dart' as second;
-import './productpageark.dart' as third;
-import './productpagemcdonald.dart' as fourth;
-import './productpageffriends.dart' as fifth;
+import './productpageark.dart' as second;
+import './productpagemcdonald.dart' as third;
+import './productpageffriends.dart' as fourth;
 import 'login.dart';
 import 'profile_page.dart';
 
@@ -27,7 +26,7 @@ class HomePage extends StatelessWidget {
       ),
       home: Builder(
         builder: (context) => DefaultTabController(
-          length: 5,
+          length: 4,
           child: Scaffold(
             appBar: AppBar(
               backgroundColor: const Color(0xffffffff),
@@ -82,7 +81,6 @@ class HomePage extends StatelessWidget {
                   Tab(
                     text: 'Home',
                   ),
-                  Tab(text: 'Login'),
                   Tab(
                     text: 'Noah\'s Ark',
                   ),
@@ -99,10 +97,9 @@ class HomePage extends StatelessWidget {
             body: TabBarView(
               children: <Widget>[
                 first.HomePage(),
-                second.LoginDemo(),
-                third.ArkProductsListPage(),
-                fourth.McDonaldProductsListPage(),
-                fifth.FriendsProductsListPage()
+                second.ArkProductsListPage(),
+                third.McDonaldProductsListPage(),
+                fourth.FriendsProductsListPage()
               ],
             ),
           ),
