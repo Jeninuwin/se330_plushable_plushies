@@ -85,14 +85,14 @@ class ProfilePage extends StatelessWidget {
                                   builder: (context) => ArkProductsListPage()));
                         },
                         child: Image.asset(
-                          "assets/images/Wolf.jpg",
+                          "assets/images/BichonFrise.jpg",
                           width: 100,
                           height: 100,
                         ),
                       )),
                   const Align(
                       alignment: Alignment.center,
-                      child: Text(" Howling Wolf      \$15.99")),
+                      child: Text(" Marshmallow Maggie      \$14.99")),
                   const Padding(
                     padding: EdgeInsets.only(top: 30.0),
                   ),
