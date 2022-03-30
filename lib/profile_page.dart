@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:se330_plushable_plushies/productlist.dart';
+import 'package:se330_plushable_plushies/productpagemcdonald.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -9,6 +11,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: const Color(0xffffffff),
+          iconTheme: IconThemeData(color: Colors.black),
           titleTextStyle: const TextStyle(color: Colors.black, fontSize: 25),
         ),
         body: SingleChildScrollView(
@@ -20,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Container(
                         width: 1000,
-                        height: 100,
+                        height: 200,
                         decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 190, 190, 190),
                             borderRadius: BorderRadius.circular(20.0)),
@@ -37,40 +40,78 @@ class ProfilePage extends StatelessWidget {
                                   child: Image.asset(
                                       'assets/images/resizedaccount.png'),
                                 )),
+                            const Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Full Name: Noah Bentley", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
+                              ),
+                            const Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Email: noah.bentley@jacks.sdstate.edu", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
+                              ),
+                            const Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text("Phone Number: 605-555-5555", style: TextStyle(fontSize: 20), textAlign: TextAlign.left,),
+                              ),                                                                
                           ],
                         ))),
                 const Padding(
                   padding: EdgeInsets.only(
                       left: 15.0, right: 15.0, top: 15, bottom: 0),
                 ),
-                Padding(
-                  //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: TextFormField(
-                    decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Email',
-                        hintText: 'Enter valid email id as abc@gmail.com'),
-                  ),
+                Column(
+                  
+                  
+                  children:<Widget>[
+                      
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ArkProductsListPage()));
+                        },
+                        child: Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,), )
+                      
+
+                    ),
+                    const Align(
+                      alignment: Alignment.centerLeft,
+
+                      child: Text(" Howling Wolf      \$15.99")
+
+                    ),
+                    const Padding(
+                    padding:  EdgeInsets.only(top: 30.0),
+                    ),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => McDonaldProductsListPage()));
+                        },
+                        child: Image.asset("assets/images/RedPanda.jpg", width: 100, height: 100,), )
+                      
+
+                    ),
+                    const Align(
+                      alignment: Alignment.centerLeft,
+
+                      child: Text(" Miko the Panda     \$15.99")
+
+                    ),                    
+                    //Image.asset("assets/images/Wolf.jpg", width: 100, height: 100,),
+                    //Text("dsada")
+                  ]
+                  
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                      left: 15.0, right: 15.0, top: 15, bottom: 0),
-                  //padding: EdgeInsets.symmetric(horizontal: 15),
-                  child: TextFormField(
-                    obscureText: true,
-                    decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Password',
-                        hintText: 'Enter secure password'),
-                  ),
-                ),
+                
                 Padding(
                     padding: const EdgeInsets.only(top: 30.0),
                     child: Column(children: const <Widget>[]))
               ],
             ),
           ),
+          
         ));
   }
 }
