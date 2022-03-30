@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:se330_plushable_plushies/credit_card.dart';
-
+import 'credit_card.dart';
 void main() {
   runApp(const MaterialApp(
     title: 'Navigation Basics',
@@ -34,16 +33,67 @@ class Checkout extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: ElevatedButton(
-          child: const Text('Checkout'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SecondRoute()),
-            );
-          },
-        ),
+      body: Column(
+
+        children: <Widget>[
+                     const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+            ),
+                     const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+            ),
+                     const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+            ),
+                     const Padding(
+              padding: EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 40, bottom: 0),
+            ),                                      
+               
+                  Align(
+                      alignment: Alignment.center,
+
+                        child: Image.asset(
+                          "assets/images/Wolf.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                  const Align(
+                      alignment: Alignment.center,
+                      child: Text(" Howling Wolf      \$15.99    Quantity: 2")),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                  ),
+                  Align(
+                      alignment: Alignment.center,
+
+                        child: Image.asset(
+                          "assets/images/BichonFrise.jpg",
+                          width: 100,
+                          height: 100,
+                        ),
+                      ),
+                  const Align(
+                      alignment: Alignment.center,
+                      child: Text(" Marshmallow Maggie      \$14.99    Quantity: 1")),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30.0),
+                  ),                    
+
+            ElevatedButton(
+                      child: const Text('Checkout'),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SecondRoute()),
+                        );
+                      },
+                    ),
+        ], 
       ),
     );
   }
