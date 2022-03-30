@@ -63,11 +63,11 @@ class McDonaldProductsListPage extends StatelessWidget {
     return Container(
       color: Colors.grey[100],
       child: ListView.builder(
-        itemCount: 5,
+        itemCount: 8,
         itemBuilder: (context, index) {
           if (index == 0) {
             return _buildFilterWidgets(screenSize);
-          } else if (index == 4) {
+          } else if (index == 7) {
             return const SizedBox(
               height: 12.0,
             );
@@ -129,46 +129,53 @@ class McDonaldProductsListPage extends StatelessWidget {
   _dummyProductsList() {
     return [
       const ProductsListItemmcdonald(
-        name: "Bitchon Frise",
-        currentPrice: 524,
+        name: "Professor Pony",
+        currentPrice: 16.99,
         originalPrice: 699,
         discount: 25,
-        image: "assets/images/Bitchon Frise.jpg",
+        image: "assets/images/pony2.jpg",
       ),
       const ProductsListItemmcdonald(
-        name: "Fawn",
-        currentPrice: 524,
+        name: "Professor Pony",
+        currentPrice: 16.99,
         originalPrice: 699,
         discount: 25,
-        image: "assets/images/Fawn.jpg",
+        image: "assets/images/pony2.jpg",
       ),
       const ProductsListItemmcdonald(
-        name: "Giraffe",
-        currentPrice: 249,
+        name: "Clarabelle",
+        currentPrice: 16.99,
+        originalPrice: 699,
+        discount: 25,
+        image: "assets/images/cow.jpg",
+      ),
+      const ProductsListItemmcdonald(
+        name: "Dolly the Sheep",
+        currentPrice: 16.99,
         originalPrice: 499,
         discount: 50,
-        image: "assets/images/Giraffe.jpg",
+        image: "assets/images/sheep.jpg",
       ),
       const ProductsListItemmcdonald(
-        name: "Ferret",
-        currentPrice: 899,
+        name: "Chica Chick",
+        currentPrice: 16.99,
         originalPrice: 1299,
         discount: 23,
-        image: "assets/images/Ferret.jpg",
+        image: "assets/images/chicken.jpg",
       ),
       const ProductsListItemmcdonald(
-        name: "Lion Cub",
-        currentPrice: 249,
+        name: "Petunia Pig",
+        currentPrice: 16.99,
         originalPrice: 499,
         discount: 20,
-        image: "assets/images/Lion Cub.jpg",
+        image: "assets/images/pig.jpg",
       ),
       const ProductsListItemmcdonald(
-        name: "Otter2",
-        currentPrice: 899,
+        name: "Tixie the Fox",
+        currentPrice: 16.99,
         originalPrice: 1299,
         discount: 23,
-        image: "assets/images/otter 2.jpg",
+        image: "assets/images/fox.jpg",
       ),
     ];
   }

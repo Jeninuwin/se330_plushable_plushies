@@ -63,11 +63,11 @@ class ArkProductsListPage extends StatelessWidget {
     return Container(
       color: Colors.grey[100],
       child: ListView.builder(
-        itemCount: 8,
+        itemCount: 10,
         itemBuilder: (context, index) {
           if (index == 0) {
             return _buildFilterWidgets(screenSize);
-          } else if (index == 7) {
+          } else if (index == 9) {
             return const SizedBox(
               height: 12.0,
             );
